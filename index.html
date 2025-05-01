@@ -17,12 +17,6 @@
         <li><a href="#" data-tr="Ana Sayfa" data-en="Home">Home</a></li>
         <li><a href="#" data-tr="Hakkında" data-en="About">About</a></li>
         <li><a href="#" data-tr="İletişim" data-en="Contact">Contact</a></li>
-        <li>
-          <select id="language-select">
-            <option value="en">English</option>
-            <option value="tr">Türkçe</option>
-          </select>
-        </li>
       </ul>
     </nav>
 
@@ -49,16 +43,6 @@
       <p data-tr="© 2025 Tüm Hakları Saklıdır" data-en="© 2025 All rights reserved">© 2025 All rights reserved</p>
     </footer>
 
-    <script>
-      const langSelect = document.getElementById("language-select");
-
-      langSelect.addEventListener("change", () => {
-        const lang = langSelect.value;
-        document.querySelectorAll("[data-tr]").forEach(el => {
-          el.innerText = el.getAttribute(data-$lang);
-        });
-      });
-    </script>
 
 </body>
 </html>
