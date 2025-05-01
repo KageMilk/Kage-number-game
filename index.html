@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Download App</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+  <header>
+    <h1 data-tr="Uygulama İndir" data-en="Download App">Download App</h1>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="#" data-tr="Ana Sayfa" data-en="Home">Home</a></li>
+      <li><a href="#" data-tr="Hakkında" data-en="About">About</a></li>
+      <li><a href="#" data-tr="İletişim" data-en="Contact">Contact</a></li>
+      <li>
+        <select id="language-select">
+          <option value="en">English</option>
+          <option value="tr">Türkçe</option>
+        </select>
+      </li>
+    </ul>
+  </nav>
+
+  <main>
+    <section class="content">
+      <h2 data-tr="Android Uygulamasını İndir" data-en="Get the Android App">Get the Android App</h2>
+      <p data-tr="Lütfen istediğiniz dili seçerek uygun APK dosyasını indirin."
+         data-en="Select your language and download the APK file.">
+        Select your language and download the APK file.
+      </p>
+      <div class="buttons">
+        <a class="download-btn"
+           href="https://drive.google.com/file/d/1bxDtJ8BsdeS_iwSEhk7bL-YCCfSaen5G/view?usp=drive_link"
+           data-tr="Türkçe APK" data-en="Turkish APK">Turkish APK</a>
+
+        <a class="download-btn"
+           href="https://drive.google.com/file/d/1VrmUCk2adJPpEqWqIpBlqBjQwbjg9pMo/view?usp=drive_link"
+           data-tr="İngilizce APK" data-en="English APK">English APK</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p data-tr="© 2025 Tüm Hakları Saklıdır" data-en="© 2025 All rights reserved">© 2025 All rights reserved</p>
+  </footer>
+
+  <script>
+    const langSelect = document.getElementById("language-select");
+
+    langSelect.addEventListener("change", () => {
+      const lang = langSelect.value;
+      document.querySelectorAll("[data-tr]").forEach(el => {
+        el.innerText = el.getAttribute(data-$lang);
+      });
+    });
+  </script>
+
+</body>
+</html>
